@@ -17,6 +17,19 @@ JNA 将尝试从以下路径加载 `whispercpp` 共享库：
 - `/System/Library/Frameworks`
 -  classpath
 
+## 导入
+maven
+```
+<dependency>
+    <groupId>com.litongjava</groupId>
+    <artifactId>whisper-cpp-java</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+gradle
+```
+implementation "com.litongjava:whisper-cpp-java:1.0.0"
+```
 ## 测试
 
 ### 加载模型

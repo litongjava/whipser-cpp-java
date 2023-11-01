@@ -1,5 +1,5 @@
 # Java JNI Bindings for Whisper
-[English](README.md)|[中文](readme_cn.md)
+[English](README.md)|[中文](readme_cn.md)  
 This package offers Java JNI bindings for `whisper.cpp`. The following platforms have been successfully tested:
 
 - ~~Darwin (OS X) 12.6 on x64_64~~
@@ -17,6 +17,19 @@ JNA will try to load the `whispercpp` shared library from the following paths:
 - `/System/Library/Frameworks`
 - classpath
 
+## Import
+maven
+```
+<dependency>
+    <groupId>com.litongjava</groupId>
+    <artifactId>whisper-cpp-java</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+gradle
+```
+implementation "com.litongjava:whisper-cpp-java:1.0.0"
+```
 ## Testing
 
 ### Loading the Model
