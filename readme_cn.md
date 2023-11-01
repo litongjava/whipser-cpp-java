@@ -41,8 +41,6 @@ implementation "com.litongjava:whisper-cpp-java:1.0.0"
 src\main\resources\win32-x86-64\whisper.dll
 ```
 
-### 样本测试
-
 ```java
 package com.litongjava.whipser.cpp.java;
 
@@ -63,7 +61,7 @@ class WhisperJnaLibraryTest {
 }
 ```
 
-### 使用模型
+### 样本测试
 
 1. 从以下位置下载模型：
    - [Hugging Face 模型](https://huggingface.co/ggerganov/whisper.cpp)

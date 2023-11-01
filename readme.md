@@ -41,8 +41,6 @@ implementation "com.litongjava:whisper-cpp-java:1.0.0"
 src\main\resources\win32-x86-64\whisper.dll
 ```
 
-### Sample Test
-
 ```java
 package com.litongjava.whipser.cpp.java;
 
@@ -63,7 +61,7 @@ class WhisperJnaLibraryTest {
 }
 ```
 
-### Using the Model
+### Sample Test
 
 1. Download the model from:
    - [Hugging Face Model](https://huggingface.co/ggerganov/whisper.cpp)
