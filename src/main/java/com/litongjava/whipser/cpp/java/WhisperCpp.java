@@ -40,7 +40,7 @@ public class WhisperCpp implements AutoCloseable {
 
     if (!modelPath.contains("/") && !modelPath.contains("\\")) {
       if (!modelPath.endsWith(".bin")) {
-        modelPath = "ggml-" + modelPath.replace("-", ".") + ".bin";
+        modelPath = modelPath + ".bin";
       }
 
       modelPath = new File(modelDir(), modelPath).getAbsolutePath();
@@ -133,8 +133,7 @@ public class WhisperCpp implements AutoCloseable {
     return str.toString().trim();
   }
 
-  public List<WhisperSegment> fullTranscribeWithTime(WhisperFullParams whisperParams, float[] audioData)
-      throws IOException {
+  public List<WhisperSegment> fullTranscribeWithTime(WhisperFullParams whisperParams, float[] audioData) throws IOException {
     if (ctx == null) {
       throw new IllegalStateException("Model not initialised");
     }
@@ -156,12 +155,12 @@ public class WhisperCpp implements AutoCloseable {
     return segments;
   }
 
-//    public int getTextSegmentCount(Pointer ctx) {
-//        return lib.whisper_full_n_segments(ctx);
-//    }
-//    public String getTextSegment(Pointer ctx, int index) {
-//        return lib.whisper_full_get_segment_text(ctx, index);
-//    }
+  //    public int getTextSegmentCount(Pointer ctx) {
+  //        return lib.whisper_full_n_segments(ctx);
+  //    }
+  //    public String getTextSegment(Pointer ctx, int index) {
+  //        return lib.whisper_full_get_segment_text(ctx, index);
+  //    }
 
   public String getSystemInfo() {
     return lib.whisper_print_system_info();
